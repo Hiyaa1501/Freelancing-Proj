@@ -1,6 +1,6 @@
 import express from "express"
 import cors from "cors"
-import noteModel from "./models/note.model.js";
+
 
 const app = express();
 
