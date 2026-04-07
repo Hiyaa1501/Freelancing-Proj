@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "  ",
     "dev": "nodemon src/index.js"
   },
   "author": "Arpan Dhandar",

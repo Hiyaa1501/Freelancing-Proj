@@ -43,8 +43,12 @@ if (!process.env.REFRESH_TOKEN_EXPIRY) {
     throw new ApiError(404, `REFRESH_TOKEN_EXPIRY is not defined in .env file`);
 }
 
-if (!process.env.JWT_SERCRET) {
-    throw new ApiError(404, `JWT_SERCRET is not defined in .env file`)
+if (!process.env.JWT_SECRET) {
+    throw new ApiError(404, `JWT_SECRET is not defined in .env file`)
+}
+
+if (!process.env.NODE_ENV) {
+    throw new ApiError(404, `NODE_ENV is not defined in .env file`)
 }
 const config = {
     PORT: process.env.PORT,
@@ -57,7 +61,8 @@ const config = {
     REFRESH_TOKEN_SECRET: process.env.REFRESH_TOKEN_SECRET,
     REFRESH_TOKEN_EXPIRY: process.env.REFRESH_TOKEN_EXPIRY,
     CORS_ORIGIN: process.env.CORS_ORIGIN,
-    JWT_SERCRET: process.env.JWT_SERCRET
+    JWT_SECRET: process.env.JWT_SECRET,
+    NODE_ENV: process.env.NODE_ENV
 };
 
 export default config;
